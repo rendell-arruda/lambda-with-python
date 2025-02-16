@@ -3,9 +3,10 @@ from chalice import Chalice
 app = Chalice(app_name='endpoint')
 
 
-@app.route('/')
-def index():
-    return {'hello': 'world'}
+@app.route('/id/{id}')
+def index(id):
+    print(f"o id enviado foi {id} ")
+    return True
 
 
 # The view function above will return {"hello": "world"}
